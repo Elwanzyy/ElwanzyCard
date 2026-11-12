@@ -1,0 +1,980 @@
+
+/* ===== PENGATURAN DASAR ===== */
+
+/* Mengatur semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Mengatur tampilan utama halaman */
+body {
+    background: #08080c;
+    color: #f5f1fa;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ===== BACKGROUND GOTHIC ===== */
+
+/* Foto memenuhi seluruh halaman termasuk footer */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+
+    /* Ganti gothic-bg.jpg dengan nama foto background lo */
+    background-image: url("gothic-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Lapisan gelap agar tulisan tetap terbaca */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            rgba(5, 4, 8, 0.70),
+            rgba(5, 4, 8, 0.78)
+        ),
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(91, 55, 120, 0.14),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+/* ===== EFEK CAHAYA ===== */
+
+/* Bentuk cahaya dekoratif */
+.ambient {
+    position: fixed;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Cahaya ungu bagian atas */
+.ambient-one {
+    top: 10%;
+    left: -130px;
+    background: #8b45c5;
+}
+
+/* Cahaya ungu bagian bawah */
+.ambient-two {
+    bottom: 10%;
+    right: -130px;
+    background: #512477;
+}
+
+/* Memastikan konten berada di atas background */
+.site-header,
+.container,
+.site-footer {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ===== HEADER / NAVIGASI ===== */
+
+/* Area navigasi atas */
+.site-header {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 22px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo website */
+.logo,
+.footer-logo {
+    color: #f5f1fa;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+/* Titik ungu pada logo */
+.logo span,
+.footer-logo span {
+    color: #b68bd8;
+}
+
+/* Daftar navigasi */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+/* Link navigasi */
+.nav-menu a {
+    color: #b9b2c2;
+    text-decoration: none;
+    font-size: 11px;
+    transition: 0.3s;
+}
+
+/* Efek ketika link disentuh */
+.nav-menu a:hover {
+    color: #d7b4f5;
+}
+
+/* Tombol menu HP */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* ===== KONTEN UTAMA ===== */
+
+/* Membatasi lebar isi website */
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    padding: 0 22px;
+}
+
+
+/* ===== HERO / PERKENALAN ===== */
+
+/* Area perkenalan utama */
+.hero {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 55px 15px 65px;
+}
+
+/* Bingkai foto profil */
+.profile-frame {
+    width: 105px;
+    height: 105px;
+    padding: 4px;
+    border-radius: 50%;
+    border: 1px solid rgba(202, 166, 230, 0.55);
+    margin-bottom: 22px;
+}
+
+/* Foto profil */
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Tulisan kecil di atas judul */
+.eyebrow {
+    color: #c4a3df;
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+/* Nama utama */
+.hero h1 {
+    font-size: clamp(36px, 8vw, 58px);
+    letter-spacing: 8px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Deskripsi perkenalan */
+.hero-description {
+    max-width: 430px;
+    color: #c1bac9;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* Lokasi kecil */
+.hero-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 18px;
+    color: #a99bb5;
+    font-size: 10px;
+}
+
+
+/* ===== GLASS PANEL ===== */
+
+/* Panel utama setiap section */
+.glass-panel {
+    padding: 25px;
+    margin-bottom: 19px;
+    border-radius: 15px;
+
+    background: rgba(13, 11, 18, 0.56);
+    border: 1px solid rgba(190, 155, 220, 0.15);
+
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
+}
+
+
+/* ===== JUDUL SECTION ===== */
+
+/* Menyusun nomor dan judul */
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 17px;
+}
+
+/* Nomor section */
+.section-number {
+    color: #b68bd8;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* Label kecil */
+.section-label {
+    color: #a991bd;
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-bottom: 3px;
+}
+
+/* Judul section */
+.section-heading h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Deskripsi section */
+.section-description {
+    color: #c0b9c8;
+    font-size: 11px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+
+/* ===== ABOUT ME ===== */
+
+/* Susunan informasi */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Kartu informasi */
+.info-card {
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 9px;
+    padding: 13px;
+}
+
+/* Label informasi */
+.info-label {
+    color: #a991bd;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+}
+
+/* Isi informasi */
+.info-card h3 {
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+
+/* ===== MUSIC ===== */
+
+/* Susunan kartu musik */
+.small-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+}
+
+/* Kartu musik */
+.small-card {
+    min-width: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    padding: 13px 10px;
+
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 9px;
+}
+
+/* Ikon musik */
+.small-card > i {
+    width: 16px;
+    min-width: 16px;
+    color: #c19cde;
+}
+
+/* Judul kartu musik */
+.small-card h3 {
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+/* Deskripsi kartu musik */
+.small-card p {
+    color: #aaa1b3;
+    font-size: 8px;
+    line-height: 1.6;
+}
+
+
+/* ===== GAMES ===== */
+
+/* Dua kolom kartu game */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* Kartu game */
+.game-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    padding: 12px;
+
+    color: white;
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+
+    transition: 0.25s;
+}
+
+/* Efek hover game */
+.game-card:hover {
+    background: rgba(151, 104, 190, 0.13);
+    border-color: rgba(190, 155, 220, 0.35);
+    transform: translateY(-2px);
+}
+
+/* Kotak ikon game */
+.game-icon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* Warna ikon Mobile Legends */
+.ml-icon {
+    background: #272b4d;
+    color: #b9caff;
+}
+
+/* Warna ikon Roblox */
+.roblox-icon {
+    background: #383838;
+    color: white;
+}
+
+/* Informasi game */
+.game-info {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Nama game */
+.game-info h3 {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/* Genre game */
+.game-info p {
+    color: #a9a1b1;
+    font-size: 8px;
+    margin-top: 3px;
+}
+
+/* Ikon link game */
+.game-card > i {
+    width: 13px;
+    color: #a99bb5;
+}
+
+
+/* ===== INTERESTS ===== */
+
+/* Kumpulan tag */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Setiap tag */
+.tag-list span {
+    padding: 7px 11px;
+    border-radius: 20px;
+
+    color: #d0c3dc;
+    font-size: 9px;
+
+    background: rgba(167, 118, 207, 0.09);
+    border: 1px solid rgba(190, 155, 220, 0.15);
+}
+
+
+/* ===== FAVORITES ===== */
+
+/* Daftar favorit */
+.favorite-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Satu baris favorit */
+.favorite-item {
+    display: grid;
+    grid-template-columns: 30px 1fr 1.3fr;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Nomor favorit */
+.favorite-item span {
+    color: #a991bd;
+    font-size: 9px;
+}
+
+/* Label favorit */
+.favorite-item p {
+    color: #bdb4c6;
+    font-size: 9px;
+}
+
+/* Isi favorit */
+.favorite-item strong {
+    color: #eee8f4;
+    font-size: 9px;
+    font-weight: 500;
+    text-align: right;
+}
+
+
+/* ===== PERSONALITY ===== */
+
+/* Kutipan */
+.quote {
+    padding: 15px;
+    margin-top: 15px;
+
+    color: #d7bce9;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.8;
+
+    border-left: 2px solid #a879cb;
+    background: rgba(167, 118, 207, 0.07);
+    border-radius: 0 8px 8px 0;
+}
+
+
+/* ===== PROJECTS ===== */
+
+/* Kartu project */
+.project-card {
+    padding: 15px;
+    margin-top: 10px;
+
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+}
+
+/* Bagian atas kartu project */
+.project-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+/* Ikon project */
+.project-top > i {
+    width: 19px;
+    color: #c19cde;
+}
+
+/* Status project */
+.project-status {
+    color: #c3a2dc;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+/* Nama project */
+.project-card h3 {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+/* Deskripsi project */
+.project-card p {
+    color: #b5adbf;
+    font-size: 9px;
+    line-height: 1.8;
+}
+
+/* Kategori project */
+.project-category {
+    display: inline-block;
+    color: #a991bd;
+    font-size: 8px;
+    letter-spacing: 1px;
+    margin-top: 12px;
+}
+
+
+/* ===== CONNECT / SOSIAL MEDIA ===== */
+
+/* Susunan sosial media */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+}
+
+/* Link sosial media */
+.social-grid a {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+    padding: 12px;
+
+    color: #e9e2ef;
+    font-size: 10px;
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 9px;
+
+    transition: 0.25s;
+}
+
+/* Logo asli sosial media */
+.social-grid a img {
+    width: 17px;
+    height: 17px;
+    min-width: 17px;
+    object-fit: contain;
+    display: block;
+    opacity: 0.85;
+    filter: grayscale(1);
+    transition: 0.25s;
+}
+
+/* Efek logo saat disentuh */
+.social-grid a:hover img {
+    opacity: 1;
+}
+
+/* Ikon panah */
+.social-grid a i:last-child {
+    width: 12px;
+    height: 12px;
+    color: #8e8299;
+    flex-shrink: 0;
+}
+
+/* Teks sosial media */
+.social-grid a span {
+    flex: 1;
+}
+
+/* Ikon panah */
+.social-grid a i:last-child {
+    width: 12px;
+    color: #8e8299;
+}
+
+/* Efek hover sosial media */
+.social-grid a:hover {
+    background: rgba(151, 104, 190, 0.13);
+    border-color: rgba(190, 155, 220, 0.35);
+}
+
+
+/* ===== FOOTER ===== */
+
+/* Area bawah website */
+.site-footer {
+    text-align: center;
+    padding: 35px 20px 25px;
+}
+
+/* Logo footer */
+.footer-logo {
+    font-size: 15px;
+}
+
+/* Deskripsi footer */
+.site-footer p {
+    color: #aaa1b1;
+    font-size: 9px;
+    margin-top: 9px;
+}
+
+/* Copyright */
+.site-footer .copyright {
+    color: #777080;
+    font-size: 8px;
+    margin-top: 17px;
+}
+
+
+/* ===== ANIMASI MUNCUL ===== */
+
+/* Animasi awal section */
+.reveal {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Kondisi setelah terlihat */
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ===== TAMPILAN HP ===== */
+
+@media (max-width: 600px) {
+
+    /* Header HP */
+    .site-header {
+        padding: 17px 20px;
+    }
+
+    /* Tombol menu HP */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Ukuran ikon menu */
+    .menu-toggle i {
+        width: 21px;
+    }
+
+    /* Navigasi dropdown HP */
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        left: 20px;
+        z-index: 5;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+
+        padding: 9px;
+        border-radius: 10px;
+
+        background: rgba(15, 12, 20, 0.96);
+        border: 1px solid rgba(190, 155, 220, 0.17);
+        backdrop-filter: blur(15px);
+    }
+
+    /* Navigasi ketika dibuka */
+    .nav-menu.show {
+        display: flex;
+    }
+
+    /* Link navigasi HP */
+    .nav-menu a {
+        width: 100%;
+        padding: 11px;
+    }
+
+    /* Jarak konten HP */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Hero HP */
+    .hero {
+        min-height: 350px;
+        padding: 40px 10px 50px;
+    }
+
+    /* Foto profil HP */
+    .profile-frame {
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Judul hero HP */
+    .hero h1 {
+        font-size: 38px;
+        letter-spacing: 6px;
+    }
+
+    /* Deskripsi hero HP */
+    .hero-description {
+        font-size: 10px;
+        max-width: 310px;
+    }
+
+    /* Panel HP */
+    .glass-panel {
+        padding: 18px;
+        margin-bottom: 14px;
+        border-radius: 12px;
+    }
+
+    /* Judul section HP */
+    .section-heading h2 {
+        font-size: 17px;
+    }
+
+    /* Deskripsi section HP */
+    .section-description {
+        font-size: 10px;
+    }
+
+    /* Kartu musik HP */
+    .small-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Kartu musik lebih ringkas */
+    .small-card {
+        align-items: center;
+        padding: 11px;
+    }
+
+    /* Ukuran kartu game HP */
+    .game-card {
+        padding: 10px 8px;
+        gap: 7px;
+    }
+
+    /* Ukuran ikon game HP */
+    .game-icon {
+        width: 29px;
+        height: 29px;
+        min-width: 29px;
+        font-size: 11px;
+    }
+
+    /* Teks game HP */
+    .game-info h3 {
+        font-size: 9px;
+    }
+
+    /* Daftar favorit HP */
+    .favorite-item {
+        grid-template-columns: 23px 1fr 1.2fr;
+        gap: 5px;
+    }
+
+    /* Teks favorit HP */
+    .favorite-item p,
+    .favorite-item strong {
+        font-size: 8px;
+    }
+
+    /* Sosial media HP */
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Link sosial media HP */
+    .social-grid a {
+        padding: 10px 8px;
+        font-size: 9px;
+        gap: 7px;
+    }
+
+    /* Footer HP */
+    .site-footer {
+        padding: 28px 15px 22px;
+    }
+}
+
+
+/* ===== PENGATURAN AKSESIBILITAS ===== */
+
+/* Mengurangi animasi jika pengguna memilih reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* ===== GAME CARD: MOBILE LEGENDS & ROBLOX ===== */
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* Tampilan kartu game */
+.game-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px;
+    min-width: 0;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(180, 150, 220, 0.13);
+    border-radius: 12px;
+    color: #f5f2fa;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* Efek saat disentuh */
+.game-card:hover {
+    background: rgba(150, 110, 200, 0.10);
+    border-color: rgba(180, 150, 220, 0.35);
+    transform: translateY(-3px);
+}
+
+/* Kotak ikon */
+.game-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #17131f;
+}
+
+/* Gambar ML dan Roblox */
+.game-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Informasi game */
+.game-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.game-info h3 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.game-info p {
+    font-size: 10px;
+    color: #aaa2b8;
+}
+
+/* Ikon Roblox */
+.roblox-icon {
+    background: #ffffff;
+}
+
+/* Ikon Mobile Legends */
+.ml-icon {
+    background: #17131f;
+}
+
+/* Ikon link Roblox */
+.game-card > i {
+    width: 14px;
+    height: 14px;
+    color: #aaa2b8;
+    flex-shrink: 0;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== HERO PROFILE ALIGNMENT ===== */
+
+.hero {
+    text-align: center;
+}
