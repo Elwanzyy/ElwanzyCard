@@ -977,3 +977,32 @@ body::after {
 .hero {
     text-align: center;
 }
+
+/* ===== ELWANZY VISITOR COUNTER ===== */
+
+.counterapi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: fit-content;
+    margin: 25px auto;
+    padding: 10px 18px;
+
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(167, 139, 250, 0.18);
+    border-radius: 10px;
+
+    color: #cfc7ff;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: inherit;
+}
+
+/* Hover Effect */
+.counterapi:hover {
+    border-color: rgba(167, 139, 250, 0.4);
+    background: rgba(167, 139, 250, 0.05);
+    transition: 0.3s ease;
+}
