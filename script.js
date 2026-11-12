@@ -116,23 +116,3 @@ if (copyright) {
     copyright.textContent =
         `© ${new Date().getFullYear()} ELWANZY. All rights reserved.`;
 }
-
-// ===== ELWANZY VISITOR COUNTER =====
-document.addEventListener("DOMContentLoaded", async () => {
-    const display = document.getElementById("visitor-count");
-
-    if (!display) return;
-
-    try {
-        const response = await fetch(
-            "https://api.counterapi.dev/v2/WORKSPACE/homepage/up"
-        );
-
-        const result = await response.json();
-
-        display.textContent = result.data.up_count;
-    } catch (error) {
-        display.textContent = "Unavailable";
-        console.error("Visitor counter error:", error);
-    }
-});
