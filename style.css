@@ -85,7 +85,11 @@ body::after {
 }
 
 /* Memastikan konten berada di atas background */
-.site-header,
+.site-header {
+    position: relative;
+    z-index: 20;
+}
+
 .container,
 .site-footer {
     position: relative;
@@ -728,7 +732,7 @@ body::after {
         top: 60px;
         right: 20px;
         left: 20px;
-        z-index: 5;
+        z-index: 21;
 
         flex-direction: column;
         align-items: flex-start;
