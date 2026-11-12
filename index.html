@@ -1,0 +1,419 @@
+<!DOCTYPE html> 
+<html lang="id"> 
+<head>  
+    <!-- Pengaturan dasar halaman -->  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Judul website -->  
+<title>ElwanzyCard.com</title>  
+
+<!-- Font dari Google Fonts -->  
+<link rel="preconnect" href="https://fonts.googleapis.com">  
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
+
+<!-- Menghubungkan file CSS -->  
+<link rel="stylesheet" href="style.css">  
+
+</head>  
+  
+  <body>  <!-- Efek cahaya latar -->  
+<div class="ambient ambient-one"></div>  
+<div class="ambient ambient-two"></div>  
+
+<!-- ===== HEADER / NAVIGASI ===== -->  
+<header class="site-header">  
+    <a href="#home" class="logo">ELWANZY<span>.</span></a>  
+
+    <!-- Tombol menu untuk tampilan HP -->  
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">  
+        <i data-lucide="menu"></i>  
+    </button>  
+
+    <!-- Daftar navigasi -->  
+    <nav class="nav-menu" id="navMenu">  
+        <a href="#home">Home</a>  
+        <a href="#about">About</a>  
+        <a href="#music">Music</a>  
+        <a href="#games">Games</a>  
+        <a href="#interests">Interests</a>  
+        <a href="#connect">Connect</a>  
+    </nav>  
+</header>  
+
+
+<!-- ===== KONTEN UTAMA ===== -->  
+<main class="container">  
+
+    <!-- ===== HERO / PERKENALAN AWAL ===== -->  
+    <section class="hero reveal" id="home">  
+
+        <!-- Foto profil bisa diganti nanti -->  
+        <div class="profile-frame">  
+            <img src="profile.jpg" alt="Foto profil ELWANZY">  
+        </div>  
+
+        <p class="eyebrow">A PERSONAL SPACE · EST. 2026</p>  
+
+        <h1>ELWANZY</h1>  
+
+        <p class="hero-description">  
+            Just doing my own thing.
+        </p>  
+
+        <span class="hero-location">  
+            <i data-lucide="map-pin"></i>  
+            Indonesia  
+        </span>  
+    </section>  
+
+
+    <!-- ===== ABOUT ME ===== -->  
+    <section class="glass-panel reveal" id="about">  
+
+        <div class="section-heading">  
+            <span class="section-number">01</span>  
+            <div>  
+                <p class="section-label">GET TO KNOW ME</p>  
+                <h2>About Me</h2>  
+            </div>  
+        </div>  
+
+        <p class="section-description">  
+            Hey, welcome to my little corner of the internet.  
+            I'm someone who enjoys games, music, technology,  
+            and discovering new things. This website is a small  
+            introduction to who I am and what I like.  
+        </p>  
+
+        <!-- Informasi singkat -->  
+        <div class="info-grid">  
+
+            <div class="info-card">  
+                <span class="info-label">NAME</span>  
+                <h3>Ridwan Ramadan</h3>  
+            </div>  
+
+            <div class="info-card">  
+                <span class="info-label">NICKNAME</span>  
+                <h3>Elwanzy</h3>  
+            </div>  
+
+            <div class="info-card">  
+                <span class="info-label">LOCATION</span>  
+                <h3>Indonesia</h3>  
+            </div>  
+
+            <div class="info-card">  
+                <span class="info-label">CURRENTLY</span>  
+                <h3>Learning & Growing</h3>  
+            </div>  
+
+        </div>  
+    </section>  
+
+
+    <!-- ===== MUSIC ===== -->  
+    <section class="glass-panel reveal" id="music">  
+
+        <div class="section-heading">  
+            <span class="section-number">02</span>  
+            <div>  
+                <p class="section-label">MY PLAYLIST</p>  
+                <h2>Music I Like</h2>  
+            </div>  
+        </div>  
+
+        <p class="section-description">  
+            Music for different moods, late nights, and quiet moments.  
+        </p>  
+
+        <div class="small-card-grid">  
+
+            <div class="small-card">  
+                <i data-lucide="music-2"></i>  
+                <div>  
+                    <h3>Favorite Songs</h3>  
+                    <p>Cry - Cigarettes After Sex</p>  
+                </div>  
+            </div>  
+
+            <div class="small-card">  
+                <i data-lucide="headphones"></i>  
+                <div>  
+                    <h3>Favorite Artists</h3>  
+                    <p>cigarettes After Sex</p>  
+                </div>  
+            </div>  
+
+            <div class="small-card">  
+                <i data-lucide="disc-3"></i>  
+                <div>  
+                    <h3>Music Genre</h3>  
+                    <p>R&B · Pop · Alternative</p>  
+                </div>  
+            </div>  
+
+        </div>  
+    </section>  
+
+
+    <!-- ===== GAMES ===== -->  
+    <section class="glass-panel reveal" id="games">  
+
+        <div class="section-heading">  
+            <span class="section-number">03</span>  
+            <div>  
+                <p class="section-label">MY GAME WORLD</p>  
+                <h2>Games I Play</h2>  
+            </div>  
+        </div>  
+
+        <p class="section-description">  
+            Some games I enjoy playing in my free time.  
+        </p>  
+
+        <div class="game-grid">
+
+    <!-- MOBILE LEGENDS -->
+    <div class="game-card">
+        <div class="game-icon ml-icon">
+            <img src="ml.jpg" alt="Mobile Legends">
+        </div>
+
+        <div class="game-info">
+            <h3>Mobile Legends</h3>
+            <p>USN: xElwanzy</p>
+        </div>
+    </div>
+
+    <!-- ROBLOX -->
+    <a class="game-card"
+       href="https://www.roblox.com/share?code=9bfa2a3cab9b32439184f0ede1a6e051&type=Profile&source=ProfileShare&stamp=1794428038741"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <div class="game-icon roblox-icon">
+            <img src="roblox.png" alt="Roblox">
+        </div>
+
+        <div class="game-info">
+            <h3>Roblox</h3>
+        </div>
+
+        <i data-lucide="external-link"></i>
+    </a>
+
+</div>
+    </section>  
+
+
+    <!-- ===== INTERESTS ===== -->  
+    <section class="glass-panel reveal" id="interests">  
+
+        <div class="section-heading">  
+            <span class="section-number">04</span>  
+            <div>  
+                <p class="section-label">THINGS I ENJOY</p>  
+                <h2>My Interests</h2>  
+            </div>  
+        </div>  
+
+        <div class="tag-list">  
+            <span>Gaming</span>  
+            <span>Technology</span>  
+            <span>Web Development</span>  
+            <span>Digital Design</span>  
+            <span>Creativity</span>  
+            <span>Discord Server Building</span>  
+            <span>Exploring</span> 
+        </div>  
+    </section>  
+
+
+    <!-- ===== FAVORITES ===== -->  
+    <section class="glass-panel reveal" id="favorites">  
+
+        <div class="section-heading">  
+            <span class="section-number">05</span>  
+            <div>  
+                <p class="section-label">A FEW PERSONAL PICKS</p>  
+                <h2>My Favorites</h2>  
+            </div>  
+        </div>  
+
+        <div class="favorite-list">  
+
+            <div class="favorite-item">  
+                <span>01</span>  
+                <p>Favorite Colors</p>  
+                <strong>Black · Purple · Grey</strong>  
+            </div>  
+
+            <div class="favorite-item">  
+                <span>02</span>  
+                <p>Favorite Atmosphere</p>  
+                <strong>calm</strong>  
+            </div>  
+
+            <div class="favorite-item">  
+                <span>03</span>  
+                <p>Favorite Activity</p>  
+                <strong>Gaming & Exploring</strong>  
+            </div>  
+
+            <div class="favorite-item">  
+                <span>04</span>  
+                <p>Favorite Time</p>  
+                <strong>Late Night</strong>  
+            </div>  
+
+        </div>  
+    </section>  
+
+
+    <!-- ===== PERSONALITY ===== -->  
+    <section class="glass-panel reveal" id="personality">  
+
+        <div class="section-heading">  
+            <span class="section-number">06</span>  
+            <div>  
+                <p class="section-label">A LITTLE ABOUT MYSELF</p>  
+                <h2>Personality</h2>  
+            </div>  
+        </div>  
+
+        <p class="section-description">  
+            Quiet at first, observant most of the time, and always  
+            interested in learning something new. I enjoy having  
+            my own space while working toward bigger goals.  
+        </p>  
+
+        <blockquote class="quote">  
+            "New chapter, same ambition, greater purpose."  
+        </blockquote>  
+    </section>  
+
+
+    <!-- ===== PROJECTS ===== -->  
+    <section class="glass-panel reveal" id="projects">  
+
+        <div class="section-heading">  
+            <span class="section-number">07</span>  
+            <div>  
+                <p class="section-label">MY LITTLE CREATIONS</p>  
+                <h2>Projects</h2>  
+            </div>  
+        </div>  
+
+        <div class="project-card">  
+            <div class="project-top">  
+                <i data-lucide="code-2"></i>  
+                <span class="project-status">IN PROGRESS</span>  
+            </div>  
+
+            <h3>ELWANZY Website</h3>  
+
+            <p>  
+                A personal website built to learn HTML, CSS,  
+                and JavaScript while creating my own digital space.  
+            </p>  
+
+            <span class="project-category">WEB DEVELOPMENT</span>  
+        </div>  
+
+        <div class="project-card">  
+            <div class="project-top">  
+                <i data-lucide="palette"></i>  
+                <span class="project-status">EXPLORING</span>  
+            </div>  
+
+            <h3>Creative Experiments</h3>  
+
+            <p>  
+                Exploring visual ideas, digital design,  
+                and different creative projects.  
+            </p>  
+
+            <span class="project-category">DIGITAL CREATIVITY</span>  
+        </div>  
+    </section>  
+
+
+    <!-- ===== CONNECT ===== -->  
+    <section class="glass-panel reveal" id="connect">  
+
+        <div class="section-heading">  
+            <span class="section-number">08</span>  
+            <div>  
+                <p class="section-label">LET'S CONNECT</p>  
+                <h2>Connect With Me</h2>  
+            </div>  
+        </div>  
+
+        <p class="section-description">  
+            Find me on these platforms. Feel free to say hello.  
+        </p>  
+
+        <div class="social-grid">
+
+    <a href="https://www.instagram.com/elwanzy_/" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.simpleicons.org/instagram/eeeeee" alt="Instagram">
+        <span>Instagram</span>
+        <i data-lucide="arrow-up-right"></i>
+    </a>
+
+    <a href="https://www.tiktok.com/@elwanzyy_?_r=1&_t=ZS-9BL3uW9XhIa" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.simpleicons.org/tiktok/eeeeee" alt="TikTok">
+        <span>TikTok</span>
+        <i data-lucide="arrow-up-right"></i>
+    </a>
+
+    <a href="https://discord.com/users/1284795073778683940" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.simpleicons.org/discord/eeeeee" alt="Discord">
+        <span>Discord</span>
+        <i data-lucide="arrow-up-right"></i>
+    </a>
+
+    <a href="https://x.com/rdwannzr28" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.simpleicons.org/x/eeeeee" alt="X">
+        <span>X / Twitter</span>
+        <i data-lucide="arrow-up-right"></i>
+    </a>
+
+    <a href="https://open.spotify.com/user/31icjzgxwmuelxlbudk4o2om7zra?si=-BZoTRKTS8ukkqaY0NQ6tQ&utm_source=copy-link" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.simpleicons.org/spotify/eeeeee" alt="Spotify">
+        <span>Spotify</span>
+        <i data-lucide="arrow-up-right"></i>
+    </a>
+
+    <a href="mailto:Ridwanramadan450@gmail.com">
+        <img src="https://cdn.simpleicons.org/gmail/eeeeee" alt="Gmail">
+        <span>Gmail</span>
+        <i data-lucide="arrow-up-right"></i>
+    </a>
+
+</div>
+    </section>  
+
+</main>  
+
+
+<!-- ===== FOOTER ===== -->  
+<footer class="site-footer">  
+    <a href="#home" class="footer-logo">ELWANZY<span>.</span></a>  
+
+    <p>Made with curiosity and a little creativity.</p>  
+
+    <p class="copyright">  
+        © 2026 ELWANZY. All rights reserved.  
+    </p>  
+</footer>  
+
+  <!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- JavaScript utama -->
+<script src="script.js"></script>
+
+</body>
+</html>
